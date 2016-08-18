@@ -1,0 +1,2 @@
+# Llxx_ClientJava
+连接Llxx_ServiceApk的客户端测试程序
