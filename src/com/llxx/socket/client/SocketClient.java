@@ -11,7 +11,7 @@ import java.net.Socket;
 public class SocketClient implements Runnable
 {
     private static final String HOST = "127.0.0.1";
-    private static final int PORT = 9999;
+    private static final int PORT = 8082;
     private Socket socket = null;
     private BufferedReader in = null;
     private PrintWriter out = null;
