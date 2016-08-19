@@ -19,7 +19,8 @@ public class RunCommand
         try
         {
             Process p = run.exec(cmd);// 启动另一个进程来执行命令  
-            BufferedInputStream in = new BufferedInputStream(p.getInputStream());
+            BufferedInputStream in = new BufferedInputStream(
+                    p.getInputStream());
             BufferedReader inBr = new BufferedReader(new InputStreamReader(in));
             String lineStr;
             while ((lineStr = inBr.readLine()) != null)
@@ -32,7 +33,10 @@ public class RunCommand
             if (p.waitFor() != 0)
             {
                 if (p.exitValue() == 1)//p.exitValue()==0表示正常结束，1：非正常结束  
-                    System.err.println("命令执行失败!");
+                {
+                    // System.err.println("命令执行失败!");
+                }
+
             }
             inBr.close();
             in.close();
